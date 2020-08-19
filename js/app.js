@@ -8,37 +8,51 @@ var maxClicks = 25;
 var uniqueImageArray = [];
 
 
-function Product (source, name){
-  this.title = name
+function Product (source, name, shown=0, clicks=0){
+  this.title = name;
   // slice function from StackOverflow: https://stackoverflow.com/questions/952924/javascript-chop-slice-trim-off-last-character-in-string
 
   // capitaliation code from: https://paulund.co.uk/how-to-capitalize-the-first-letter-of-a-string-in-javascript
-  this.alt = `${name}`;
-  this.filepath = `../img/${source}`;
-  this.clicks = 0;
-  this.shown = 0;
+  this.alt = name;
+  this.filepath = source;
+  this.clicks = clicks;
+  this.shown = shown;
   productArray.push(this);
 }
-new Product('bag.jpg', 'Bag');
-new Product('banana.jpg', 'Banana');
-new Product('bathroom.jpg', 'Bathroom');
-new Product('boots.jpg', 'Boots');
-new Product('breakfast.jpg', 'Breakfast');
-new Product('bubblegum.jpg', 'Bubblegum');
-new Product('chair.jpg', 'Chair');
-new Product('cthulhu.jpg', 'Cthulhu');
-new Product('dog-duck.jpg', 'Dog Duck');
-new Product('dragon.jpg', 'Dragon');
-new Product('pen.jpg', 'Pen');
-new Product('pet-sweep.jpg', 'Pet Sweep');
-new Product('scissors.jpg', 'Scissors');
-new Product('shark.jpg', 'Shark');
-new Product('sweep.png', 'Sweep');
-new Product('tauntaun.jpg', 'Tauntaun');
-new Product('unicorn.jpg', 'Unicorn');
-new Product('usb.gif', 'USB');
-new Product('water-can.jpg', 'Water Can');
-new Product('wine-glass.jpg', 'Wine Glass');
+
+var getItemArray = localStorage.getItem('items');
+if (getItemArray === null){
+  new Product('../img/bag.jpg', 'Bag');
+  new Product('../img/banana.jpg', 'Banana');
+  new Product('../img/bathroom.jpg', 'Bathroom');
+  new Product('../img/boots.jpg', 'Boots');
+  new Product('../img/breakfast.jpg', 'Breakfast');
+  new Product('../img/bubblegum.jpg', 'Bubblegum');
+  new Product('../img/chair.jpg', 'Chair');
+  new Product('../img/cthulhu.jpg', 'Cthulhu');
+  new Product('../img/dog-duck.jpg', 'Dog Duck');
+  new Product('../img/dragon.jpg', 'Dragon');
+  new Product('../img/pen.jpg', 'Pen');
+  new Product('../img/pet-sweep.jpg', 'Pet Sweep');
+  new Product('../img/scissors.jpg', 'Scissors');
+  new Product('../img/shark.jpg', 'Shark');
+  new Product('../img/sweep.png', 'Sweep');
+  new Product('../img/tauntaun.jpg', 'Tauntaun');
+  new Product('../img/unicorn.jpg', 'Unicorn');
+  new Product('../img/usb.gif', 'USB');
+  new Product('../img/water-can.jpg', 'Water Can');
+  new Product('../img/wine-glass.jpg', 'Wine Glass');
+
+} else {
+  var parseItems = JSON.parse(getItemArray);
+  for (var i = 0; i < parseItems.length; i++){
+    var oldItem = parseItems[i];
+    new Product(oldItem.filepath, oldItem.title, oldItem.shown, oldItem.clicks);
+  }
+  console.log (parseItems);
+}
+
+
 
 function getRandomImage(){
 
@@ -97,13 +111,15 @@ function getRandomNumber(max) {
 function handleClick(event){
   totalClicks++;
   console.log('The total clicks were: '+ totalClicks);
-  console.log('the event.target', event.target.value);
-  var alt = event.target.value;
+  console.log('the event.target', event.target.alt);
+  var alt = event.target.alt;
 
   for(var i=0; i<productArray.length; i++){
     if(alt === productArray[i].alt){
+
       productArray[i].clicks++;
       productArray[i].shown++;
+      console.log(productArray[i]);
     }
   }
   parentElement.innerHTML = '';
@@ -111,7 +127,11 @@ function handleClick(event){
   getRandomImage();
   getRandomImage();
 
-  if (totalClicks>=maxClicks) {
+  var jsonItemArray = JSON.stringify(productArray);
+  localStorage.setItem('items', jsonItemArray);
+
+  if (totalClicks >= maxClicks) {
+
     parentElement.removeEventListener('click', handleClick);
     for (var j = 0; j < productArray.length; j++){
       var li = document.createElement('li');
