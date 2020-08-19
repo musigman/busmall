@@ -12,6 +12,11 @@ body {
     margin-left: 50px;
     line-height: 30px;
   }
+  #myChart {
+    height:10px;
+    width: 10px;
+
+  }
 
 #logo{
   background-color: black;
