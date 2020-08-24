@@ -68,13 +68,6 @@ body {
        margin-bottom: 10px;
        
      } 
-      #items {
-        margin: 5px;
-        margin-left: 200px;
-        height: 200px;
-        
-        
-      }
       
   p {
     font-family: 'Roboto Slab', serif;
@@ -88,7 +81,7 @@ body {
     background-color: white;
     border: solid;
     border-color: rgb(78, 77, 77);
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     margin-left: 50px;
     margin-right: 50px;
 
@@ -100,7 +93,21 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     height: 75%;
     margin-left: 50px;
-    margin-top: 550px;
-    width: 50%;
-   
+    margin-top: 50px;
   }
+
+#graphbox {
+  margin-left: 450px;
+  margin-right: 50px;
+
+  width: 800px;
+
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  margin-left: 200px;
+  margin-right: 50px;
+
+}
