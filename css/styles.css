@@ -1,200 +1,106 @@
 body {
-  font-family: sans-serif;
   background-color: white;
+  font-family: sans-serif;
 }
 
   h1 {
+    background-color: rgb(168, 230, 226);
+    border: dashed yellowgreen;
+    border-width: px;
+    color: green;
     font-family: 'Bangers', cursive;
     font-size: 5em;
-    color: darkblue;
-    background-color: rgb(168, 230, 226);
-    margin: 30px;
-    margin-top: 50px;
+    line-height: 100px;
+    margin: 10px;
     margin-left: 50px;
     margin-right: 50px;
-    line-height: 100px;
+    margin-top: 50px;
+    text-align: center;
   }
-  #myChart {
-    
-    height:100px;
-    width: 20px;
-    background-color: rgb(247, 198, 126);
-    border-color: rgb(78, 77, 77);
+  h2 {
+    color: green;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+  }
 
+  nav {
+    background-color: #bdcf46;
+    width: 93.7%;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 60px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    }
+
+    a {
+      color: darkgreen;
+      display: inline;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1em;
+      margin: 10px;
+      padding: 10px;
+      text-decoration: none;
+      
+      }
+      a:hover {
+        color: lightseagreen;
+      }
+      
+      #ul {
+        height: 5px;
+        margin: 10px;
+        margin-left: 21px;
+        margin-top: 50;
+        width: 500px;
+        
+      }
+      ul li {
+       border: 5px;
+       color: #005682;
+       display: block;
+       font-family: 'Roboto Condensed', sans-serif;
+       margin-left: 30px;
+       margin-bottom: 10px;
+       
+     } 
+      #items {
+        margin: 5px;
+        margin-left: 200px;
+        height: 200px;
+        
+        
+      }
+      
+  p {
+    font-family: 'Roboto Slab', serif;
+    line-height: 2em;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 10px;
+    text-align: center;
   }
   #products {
+    background-color: white;
     border: solid;
     border-color: rgb(78, 77, 77);
+    margin-bottom: 10px;
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 60px;
 
   }
 
-/* #logo{
-  background-color: black;
-  height: 10px;
-  width: 25px;
-  padding: 12px 40px;
-  padding-top: 22px;
-  padding-bottom: 12px;
-  text-align: center;
-} */
-/* #navigation {
-  text-align: center;
-  border: solid;
-  background-color: rgb(78, 77, 77);
-  border-color: rgb(78, 77, 77);
-  height: 50px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 1.2em;
-  width: 100%;
-} */
-
- ul li {
-  font-family: 'Roboto Condensed', sans-serif;
-  margin-left: 50px;
-  margin-bottom: 10px;
-  text-align: left;
-  border: 3px;
-  color:black;
-}
-ul li:first-child {
-  font-family: 'Roboto Condensed', sans-serif;
-  margin-left: 50px;
-  margin-bottom: 10px;
-  text-align: left;
-  border: 3px;
-  color:red;
-}
-
-/* second-img {
-margin-left: 30px;
-margin-right: 30px;
-}
-#third-img{#
-  margin-right: 130px;
-}
-#third-row{
-  display: inline;
-}
-#last-img {
-  padding-left: 135.5px;
-  text-align: left;
-}
-#text-box {
-  padding-top: 30px;
-  width: 960px;
-  height: 350px;
-  padding-bottom: 75px;
-}
-#text-container{
-  float: right;
-  width: 300px;
-  font-style: italic;
-  overflow: auto;
-  height: 350px;
-}
-#top-picture {
-  border: solid;
-  color: black;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-}
-
-
-
-
-
-
-/* nav {
-  font-family: 'Open Sans Condensed', sans-serif;
-  background-color: goldenrod;
-  width: 96%;
-  display: inline;
-  padding: 10px;
-  margin: 20px;
-  text-decoration: none;
-  } */
-
-  /* a {
-    font-family: 'Open Sans Condensed', sans-serif;
-    color: blueviolet;
-    font-size: 1em;
-    display: inline;
-    padding: 10px;
-    margin: 20px;
-    text-decoration: none;
-    
-    }
-    
-
-
-
-#redhead {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 3em;
-  color: red;
-  margin: 20px;
-  line-height: 80px;
-}
-
-p {
-  color:darkslategrey;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1em;
-  margin-left: 50px;
-  margin-right: 50px; 
-
-}
-#st {
-  background: rgba(241, 214, 126, 0.842);
-  background-image: url("../images/family.jpg");
-  background-repeat: no-repeat;
-  background-size: 1400px 900px;
-  border-style: solid;
-  border-width: thin;
-  border-color: black;
-  border-radius: 25px;
-  margin-left: 50px;
-  margin-right: 50px; 
- 
-
-}
-
-
-form {
-  background-color: darkkhaki;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 1em;
-  margin: 20px;
-  padding: 20px;
-
-}
-#add-box
-background-color: darkkhaki;
-width: 96%;
-padding: 10px;
-margin: 20px;
-}
-
-a,li {
-  color: white;
-font-family: 'Roboto Condensed', sans-serif;
-
-}
-
-h2 {
-  color: red;
-  font-family: 'Open Sans Condensed', sans-serif;
-  margin: 5px;
-  padding: 10px;
-}
-
-
-
-
-
+  #myChart {
+    background-color: lightblue;
+    border-color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 75%;
+    margin-left: 50px;
+    margin-top: 550px;
+    width: 50%;
+   
+  }
