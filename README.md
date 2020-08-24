@@ -9,4 +9,7 @@ posted on 08.23.2020
 https://github.com/musigman/busmall
 
 ## Meta
-Project completed Keith Musig with help from Sara, Kevin, and Skylar.
+Project completed Keith Musig with help from Sara S, Sara R, Kevin, and Skylar.
+
+## URL
+https://musigman.github.io/busmall/index.html
