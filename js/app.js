@@ -7,19 +7,16 @@ var totalClicks = 0;
 var maxClicks = 25;
 var uniqueImageArray = [];
 
-
+// Constructor for Products: source, name, shown, clicks
 function Product (source, name, shown=0, clicks=0){
   this.title = name;
-  // slice function from StackOverflow: https://stackoverflow.com/questions/952924/javascript-chop-slice-trim-off-last-character-in-string
-
-  // capitaliation code from: https://paulund.co.uk/how-to-capitalize-the-first-letter-of-a-string-in-javascript
   this.alt = name;
   this.filepath = source;
   this.clicks = clicks;
   this.shown = shown;
   productArray.push(this);
 }
-
+// New Product array
 var getItemArray = localStorage.getItem('items');
 if (getItemArray === null){
   new Product('../img/bag.jpg', 'Bag');
@@ -43,6 +40,9 @@ if (getItemArray === null){
   new Product('../img/water-can.jpg', 'Water Can');
   new Product('../img/wine-glass.jpg', 'Wine Glass');
 
+  // Parse item array into JSON
+  // Clear out all old items
+  // Console log parse/convert items
 } else {
   var parseItems = JSON.parse(getItemArray);
   for (var i = 0; i < parseItems.length; i++){
@@ -94,7 +94,8 @@ function buildElements(chosenImage){
   radioButton.setAttribute('value', chosenImage.alt);
 
   //<input type="radio" value=chosenImage.alt/>
-
+  // add radio button
+  // add child - image element
   parentElement.appendChild(radioButton);
   parentElement.appendChild(imageElement);
 }
@@ -122,6 +123,7 @@ function handleClick(event){
       console.log(productArray[i]);
     }
   }
+  // give parent element new content - 3 random images
   parentElement.innerHTML = '';
   getRandomImage();
   getRandomImage();
@@ -129,7 +131,7 @@ function handleClick(event){
 
   var jsonItemArray = JSON.stringify(productArray);
   localStorage.setItem('items', jsonItemArray);
-
+  // If total clicks is greater than max clicks, then remove event listener.
   if (totalClicks >= maxClicks) {
 
     parentElement.removeEventListener('click', handleClick);
@@ -140,11 +142,13 @@ function handleClick(event){
     }
   }
 }
+// display 3 random images on the page after click
 parentElement.addEventListener('click', handleClick);
 getRandomImage();
 getRandomImage();
 getRandomImage();
 
+// graph display of clicks
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'bar',
