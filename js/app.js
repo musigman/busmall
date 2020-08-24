@@ -19,26 +19,26 @@ function Product (source, name, shown=0, clicks=0){
 // New Product array
 var getItemArray = localStorage.getItem('items');
 if (getItemArray === null){
-  new Product('../img/bag.jpg', 'Bag');
-  new Product('../img/banana.jpg', 'Banana');
-  new Product('../img/bathroom.jpg', 'Bathroom');
-  new Product('../img/boots.jpg', 'Boots');
-  new Product('../img/breakfast.jpg', 'Breakfast');
-  new Product('../img/bubblegum.jpg', 'Bubblegum');
-  new Product('../img/chair.jpg', 'Chair');
-  new Product('../img/cthulhu.jpg', 'Cthulhu');
-  new Product('../img/dog-duck.jpg', 'Dog Duck');
-  new Product('../img/dragon.jpg', 'Dragon');
-  new Product('../img/pen.jpg', 'Pen');
-  new Product('../img/pet-sweep.jpg', 'Pet Sweep');
-  new Product('../img/scissors.jpg', 'Scissors');
-  new Product('../img/shark.jpg', 'Shark');
-  new Product('../img/sweep.png', 'Sweep');
-  new Product('../img/tauntaun.jpg', 'Tauntaun');
-  new Product('../img/unicorn.jpg', 'Unicorn');
-  new Product('../img/usb.gif', 'USB');
-  new Product('../img/water-can.jpg', 'Water Can');
-  new Product('../img/wine-glass.jpg', 'Wine Glass');
+  new Product('img/bag.jpg', 'Bag');
+  new Product('img/banana.jpg', 'Banana');
+  new Product('img/bathroom.jpg', 'Bathroom');
+  new Product('img/boots.jpg', 'Boots');
+  new Product('img/breakfast.jpg', 'Breakfast');
+  new Product('img/bubblegum.jpg', 'Bubblegum');
+  new Product('img/chair.jpg', 'Chair');
+  new Product('img/cthulhu.jpg', 'Cthulhu');
+  new Product('img/dog-duck.jpg', 'Dog Duck');
+  new Product('img/dragon.jpg', 'Dragon');
+  new Product('img/pen.jpg', 'Pen');
+  new Product('img/pet-sweep.jpg', 'Pet Sweep');
+  new Product('img/scissors.jpg', 'Scissors');
+  new Product('img/shark.jpg', 'Shark');
+  new Product('img/sweep.png', 'Sweep');
+  new Product('img/tauntaun.jpg', 'Tauntaun');
+  new Product('img/unicorn.jpg', 'Unicorn');
+  new Product('img/usb.gif', 'USB');
+  new Product('img/water-can.jpg', 'Water Can');
+  new Product('img/wine-glass.jpg', 'Wine Glass');
 
   // Parse item array into JSON
   // Clear out all old items
